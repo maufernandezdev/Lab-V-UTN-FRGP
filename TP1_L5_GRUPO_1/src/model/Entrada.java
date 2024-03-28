@@ -9,7 +9,7 @@ abstract public class Entrada {
 	private String diaEvento;
 	private String horarioEvento;
 	private int duracionEvento;
-	private double costo;
+	private Double costo;
 	
 	private static int cont=0; // Variable estática
 
@@ -60,7 +60,10 @@ abstract public class Entrada {
 		this.duracionEvento = duracionEvento;
 	}
 	public double getCosto() {
-		return costo;
+        if (costo == null) {
+            calcularCosto(); // Calcula el costo si no se calculo o seteo desde el main (para setearlo del main habria que poner public el setCosto)
+        }
+        return costo;
 	}
 	protected void setCosto(double costo) {  // Es del tipo Protected para permitir que las subclases lo modifiquen directamente si es necesario
 		this.costo = costo;
@@ -71,7 +74,7 @@ abstract public class Entrada {
 	@Override
 	public String toString() {
 		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreEvento=" + nombreEvento + ", diaEvento=" + diaEvento
-				+ ", horarioEvento=" + horarioEvento + ", duracionEvento=" + duracionEvento + ", costo=" + costo + "]";
+				+ ", horarioEvento=" + horarioEvento + ", duracionEvento=" + duracionEvento + ", costo=" + getCosto() + "]";
 	}
 	
 }
