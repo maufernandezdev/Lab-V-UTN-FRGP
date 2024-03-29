@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Recital extends Entrada {
+public class Recital extends Entrada implements Interfaz {
 	//atributos
     private String banda;
     private String genero;
@@ -30,11 +30,11 @@ public class Recital extends Entrada {
         this.bandasSoporte = new ArrayList<>();
     }
 
-    //valido el genero en el constructor
-    private boolean validarGenero(String genero) {
-        return generosValidos.contains(genero.toLowerCase());
+   @Override
+    public boolean validarGenero(String genero) {
+    	return generosValidos.contains(genero.toLowerCase());
     }
-              
+    
     //getters y setters 
     
 	public String getBanda() {
@@ -98,6 +98,7 @@ public class Recital extends Entrada {
             setCosto(valorGral); // valor entradas grales
         }
     }
+
 
 
     
