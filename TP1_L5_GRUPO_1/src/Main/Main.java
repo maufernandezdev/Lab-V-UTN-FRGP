@@ -1,5 +1,6 @@
 package Main;
 import model.Entrada;
+import model.EventoInfantil;
 import model.Recital;
 import model.Teatro;
 import model.Deporte;
@@ -10,17 +11,22 @@ public class Main {
 	public static void main(String[] args) {
 
 		//datos para prueba recital
-		Entrada[] entradas = new Entrada[3];		
+		Entrada[] entradas = new Entrada[5];		
 		
 		Recital recitalVip = new Recital("Recital de Heavy", "Sábado 21-1-24", "20:00", 3, "Banda musical 1", "heavy metal", true);
 		Recital recitalGral = new Recital("Recital de Pop", "Domingo 22-1-24", "21:00", 3, "Banda musical 2", "pop", false);
 		
 		Teatro teatro = new Teatro("Obra de teatro","Jueves 28-3-24","19:00", 2,"Drama");
-
+		
+		EventoInfantil eventoInfantil1 = new EventoInfantil("Circo de Topa", "Viernes 29-1-24", "20:00", 2, 7, "Circo", false);
+		EventoInfantil eventoInfantil2 = new EventoInfantil("Super Feria de Libros", "Sabado 30-1-24", "14:00", 6, 12, "Feria de Libros", true);
+		
 		entradas[0] = recitalVip;
 		entradas[1] = recitalGral;	
 		
 		entradas[2]=teatro;
+		entradas[3]=eventoInfantil1;
+		entradas[4]=eventoInfantil2;
 		
 		recitalVip.agregarBandaSoporte("Banda soporte 1");
 		recitalVip.agregarBandaSoporte("Banda soporte 2");
