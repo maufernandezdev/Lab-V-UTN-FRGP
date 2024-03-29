@@ -28,6 +28,10 @@ abstract public class Entrada {
 		this.duracionEvento = duracionEvento;
 	}
 	
+	public Entrada() {
+		
+	}
+	
 	// Gets & Sets
 	public int getNumeroEntrada() {
 		return numeroEntrada;
