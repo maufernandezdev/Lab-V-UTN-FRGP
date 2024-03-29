@@ -80,5 +80,4 @@ abstract public class Entrada {
 		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreEvento=" + nombreEvento + ", diaEvento=" + diaEvento
 				+ ", horarioEvento=" + horarioEvento + ", duracionEvento=" + duracionEvento + ", costo=" + getCosto() + "]";
 	}
-	
 }
