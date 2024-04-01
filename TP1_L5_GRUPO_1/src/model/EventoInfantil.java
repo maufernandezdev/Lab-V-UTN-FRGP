@@ -3,7 +3,7 @@ package model;
 import java.util.Arrays;
 import java.util.List;
 
-public class EventoInfantil extends Entrada implements Interfaz{
+public class EventoInfantil extends Entrada implements IGenero{
 	
 	private int edad;
     private boolean souvenir;
@@ -62,7 +62,7 @@ public class EventoInfantil extends Entrada implements Interfaz{
 	    }else {
 	    	sb.append("\nSouvenir: ").append("NO");
 	    }
-		
+		sb.append("\n");
 		return sb.toString();
 	}
 

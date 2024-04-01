@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Teatro extends Entrada implements Interfaz{
+public class Teatro extends Entrada implements IGenero{
 	
 	private String genero;
 	private static final double valor = 1350.50;
@@ -58,6 +58,7 @@ public class Teatro extends Entrada implements Interfaz{
 	        }
 	        sb.delete(sb.length() - 2, sb.length());
 	    }
+		sb.append("\n");
 	    return sb.toString();
 	}
 

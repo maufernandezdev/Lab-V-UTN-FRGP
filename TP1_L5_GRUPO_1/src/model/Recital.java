@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Recital extends Entrada implements Interfaz {
+public class Recital extends Entrada implements IGenero {
 	//atributos
     private String banda;
     private String genero;
@@ -85,6 +85,7 @@ public class Recital extends Entrada implements Interfaz {
 	        }
 	        sb.delete(sb.length() - 2, sb.length()); // borro la coma y el espacio extra al final
 	    }
+	    sb.append("\n");
 	    return sb.toString();
 	}
 	

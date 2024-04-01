@@ -76,7 +76,7 @@ public class Deporte extends Entrada{
 		sb.append("\nDeporte: ").append(deporte);
 		sb.append("\n" + super.toString());
 		sb.append("\nAmbito: ").append(tipo);
-		sb.append("\n");
+		//sb.append("\n");
 		sb.append("\n**************************");
 	    return sb.toString();
 	}

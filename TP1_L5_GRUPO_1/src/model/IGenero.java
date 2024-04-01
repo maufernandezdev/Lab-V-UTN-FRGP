@@ -1,6 +1,6 @@
 package model;
 
-public interface Interfaz {
+public interface IGenero {
 	
 	public boolean validarGenero(String genero);
 
