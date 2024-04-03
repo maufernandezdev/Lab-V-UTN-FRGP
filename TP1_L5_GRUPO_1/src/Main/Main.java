@@ -40,6 +40,6 @@ public class Main {
 		
 		for (Entrada e : entradas) {
 			System.out.println(e);
-		}
+		}		
 	}
 }

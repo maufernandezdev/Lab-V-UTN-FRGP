@@ -27,10 +27,16 @@ abstract public class Entrada {
 		this.horarioEvento = horarioEvento;
 		this.duracionEvento = duracionEvento;
 	}
-	
+	// Constructor vacio predeterminado
 	public Entrada() {
-		
+		cont++;
+		this.numeroEntrada=cont;
+		this.nombreEvento = " Sin nombre";
+		this.diaEvento = " Dia no asignado";
+		this.horarioEvento = " Horario no asignado";
+		this.duracionEvento = 0;
 	}
+	
 	
 	// Gets & Sets
 	public int getNumeroEntrada() {
@@ -77,7 +83,7 @@ abstract public class Entrada {
 	
 	@Override
 	public String toString() {
-		return "Entrada [numeroEntrada=" + numeroEntrada + ", nombreEvento=" + nombreEvento + ", diaEvento=" + diaEvento
+		return "Entrada [numeroEntrada= " + numeroEntrada + ", nombreEvento=" + nombreEvento + ", diaEvento=" + diaEvento
 				+ ", horarioEvento=" + horarioEvento + ", duracionEvento=" + duracionEvento + ", costo=" + getCosto() + "]";
 	}
 }

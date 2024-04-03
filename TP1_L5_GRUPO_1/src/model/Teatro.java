@@ -12,13 +12,20 @@ public class Teatro extends Entrada implements IGenero{
 	private List<String> actores;
 	private static final List<String> generosValidos=Arrays.asList("drama", "teatro", "comedia");
 	
-
+    //Constructores
 	public Teatro(String nombreEvento, String diaEvento, String horarioEvento, int duracionEvento, String genero) {
 		super(nombreEvento, diaEvento, horarioEvento, duracionEvento);
 		
 		if (validarGenero(genero)) this.genero = genero;
         else throw new IllegalArgumentException("El género proporcionado no es válido para un recital.");
         
+		this.actores = new ArrayList<>();
+	}
+	
+	//Constructor vacio predetermiando
+	public Teatro() {
+		super();
+		this.genero = "Genero no asignado";
 		this.actores = new ArrayList<>();
 	}
 	
@@ -40,11 +47,15 @@ public class Teatro extends Entrada implements IGenero{
 		this.genero = genero;
 	}
 		
+			
 	public List<String> getActores() {
 		return actores;
 	}
-	
-	
+
+	public void setActores(List<String> actores) {
+		this.actores = actores;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
@@ -57,7 +68,7 @@ public class Teatro extends Entrada implements IGenero{
 	            sb.append(actor).append(", ");
 	        }
 	        sb.delete(sb.length() - 2, sb.length());
-	    }
+	    }else  sb.append("\nActores: no asignados ");
 		sb.append("\n");
 	    return sb.toString();
 	}
